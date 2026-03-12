@@ -24,6 +24,11 @@ body {
     color: #333;
 }
 
+.en_construction {
+    text-align: center;
+    color: #ff6a00;
+}
+
 /* Master Wrapper with Padding */
 .site-container {
     background-color: #eeeee4; /* Your container color */
@@ -252,7 +257,7 @@ h1, h2, h3 {
 }
 
 .scroll-area {
-    max-height: calc(100vh - 350px);
+    max-height: calc(100vh*2 - 350px);
     overflow-y: auto;
     margin-left: 5px;
     margin-right: 20px;
