@@ -259,15 +259,15 @@ h1, h2, h3 {
 /* Content Area */
 .content-wrapper {
     flex: 1;
-    padding: .3rem 5rem .25rem 2rem;
+    padding: 2rem 2rem 1rem 1.5rem;
 }
 
 .scroll-area {
     max-height: 70vh;
     overflow-y: auto;
     margin-left: 5px;
-    margin-right: 20px;
-    padding: 0 2rem;
+    margin-right: 5px;
+    padding: 3rem 6rem;
 }
 
 .scroll-area::-webkit-scrollbar {
@@ -286,7 +286,7 @@ h1, h2, h3 {
 }
 
 .scroll-area::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: #F73B00;
 }
 
 .scroll-area::-webkit-scrollbar-button {
