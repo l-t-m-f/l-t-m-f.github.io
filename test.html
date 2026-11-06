@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Swimming fish background</title>
+    <title>Swimming fish background — figure-8</title>
     <style>
         *, *::before, *::after { box-sizing: border-box; }
 
@@ -15,16 +15,14 @@
             background: linear-gradient(180deg, #cdeeff 0%, #8fd3f4 45%, #4aa8d8 100%);
         }
 
-        /* ====== the layer the fish live in ====== */
         .ocean {
             position: fixed;
             inset: 0;
-            overflow: hidden;      /* clip fish as they enter/leave */
-            pointer-events: none;  /* never steal clicks from your page */
+            overflow: hidden;
+            pointer-events: none;
             z-index: 0;
         }
 
-        /* ====== your page content sits above the fish ====== */
         .content {
             position: relative;
             z-index: 1;
@@ -33,20 +31,16 @@
             padding: 5rem 1.5rem;
         }
 
-        /* ====== one fish ====== */
         .fish {
             position: absolute;
             top: var(--y, 50%);
             left: 0;
             width: var(--size, 90px);
-
-            /* "alternate" = swim right, then swim back left, forever */
             animation: swim var(--dur, 34s) linear var(--delay, 0s) infinite alternate;
             will-change: transform;
         }
 
         .fish__flip {
-            /* one full turn-around every TWO swim legs */
             animation: turn calc(var(--dur, 34s) * 2) linear var(--delay, 0s) infinite;
             will-change: transform;
         }
@@ -58,7 +52,6 @@
             animation: bob var(--bob, 6s) ease-in-out infinite alternate;
         }
 
-        /* outline only — no fill, no inner details */
         .fish path {
             fill: none;
             stroke: var(--color, #04384f);
@@ -67,19 +60,16 @@
             stroke-linecap: round;
         }
 
-        /* off-screen left  ->  off-screen right */
         @keyframes swim {
             from { transform: translateX(-25vw); }
             to   { transform: translateX(125vw); }
         }
 
-        /* face the direction of travel (the flip happens off-screen) */
         @keyframes turn {
             0%, 49.9%   { transform: scaleX(1);  }
             50%, 100%   { transform: scaleX(-1); }
         }
 
-        /* gentle up/down wander */
         @keyframes bob {
             from { transform: translateY(-7px) rotate(-2.5deg); }
             to   { transform: translateY( 7px) rotate( 2.5deg); }
@@ -92,47 +82,45 @@
 </head>
 <body>
 
-<!-- ================= background fish ================= -->
 <div class="ocean" aria-hidden="true">
 
     <div class="fish" style="--y: 8%;  --size: 64px;  --dur: 42s; --delay: -9s;  --color: #ffb703; --bob: 7s;">
         <div class="fish__flip">
-            <svg viewBox="0 0 100 60"><path d="M92 30C80 10 52 6 34 18L10 6C22 20 22 40 10 54L34 42C52 54 80 50 92 30Z"/></svg>
+            <svg viewBox="0 0 100 60"><path d="M94 30C84 4 68 3 50 26L8 4C21 15 21 45 8 56L50 34C68 57 84 56 94 30Z"/></svg>
         </div>
     </div>
 
     <div class="fish" style="--y: 22%; --size: 112px; --dur: 34s; --delay: -22s; --color: #ef476f; --bob: 5.5s;">
         <div class="fish__flip">
-            <svg viewBox="0 0 100 60"><path d="M92 30C80 10 52 6 34 18L10 6C22 20 22 40 10 54L34 42C52 54 80 50 92 30Z"/></svg>
+            <svg viewBox="0 0 100 60"><path d="M94 30C84 4 68 3 50 26L8 4C21 15 21 45 8 56L50 34C68 57 84 56 94 30Z"/></svg>
         </div>
     </div>
 
     <div class="fish" style="--y: 40%; --size: 46px;  --dur: 26s; --delay: -4s;  --color: #06d6a0; --bob: 8s;">
         <div class="fish__flip">
-            <svg viewBox="0 0 100 60"><path d="M92 30C80 10 52 6 34 18L10 6C22 20 22 40 10 54L34 42C52 54 80 50 92 30Z"/></svg>
+            <svg viewBox="0 0 100 60"><path d="M94 30C84 4 68 3 50 26L8 4C21 15 21 45 8 56L50 34C68 57 84 56 94 30Z"/></svg>
         </div>
     </div>
 
     <div class="fish" style="--y: 57%; --size: 88px;  --dur: 47s; --delay: -31s; --color: #7b2cbf; --bob: 6.5s;">
         <div class="fish__flip">
-            <svg viewBox="0 0 100 60"><path d="M92 30C80 10 52 6 34 18L10 6C22 20 22 40 10 54L34 42C52 54 80 50 92 30Z"/></svg>
+            <svg viewBox="0 0 100 60"><path d="M94 30C84 4 68 3 50 26L8 4C21 15 21 45 8 56L50 34C68 57 84 56 94 30Z"/></svg>
         </div>
     </div>
 
     <div class="fish" style="--y: 73%; --size: 54px;  --dur: 29s; --delay: -15s; --color: #f77f00; --bob: 9s;">
         <div class="fish__flip">
-            <svg viewBox="0 0 100 60"><path d="M92 30C80 10 52 6 34 18L10 6C22 20 22 40 10 54L34 42C52 54 80 50 92 30Z"/></svg>
+            <svg viewBox="0 0 100 60"><path d="M94 30C84 4 68 3 50 26L8 4C21 15 21 45 8 56L50 34C68 57 84 56 94 30Z"/></svg>
         </div>
     </div>
 
     <div class="fish" style="--y: 87%; --size: 132px; --dur: 55s; --delay: -44s; --color: #023e8a; --bob: 7.5s;">
         <div class="fish__flip">
-            <svg viewBox="0 0 100 60"><path d="M92 30C80 10 52 6 34 18L10 6C22 20 22 40 10 54L34 42C52 54 80 50 92 30Z"/></svg>
+            <svg viewBox="0 0 100 60"><path d="M94 30C84 4 68 3 50 26L8 4C21 15 21 45 8 56L50 34C68 57 84 56 94 30Z"/></svg>
         </div>
     </div>
 
 </div>
-<!-- =============== /background fish ================= -->
 
 <div class="content">
     <h1>Deep water</h1>
