@@ -1,58 +1,51 @@
+---
+---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="FR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Émile Fréchette | En construction</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Rubik+Wet+Paint&family=Rock+Salt&display=swap"
-          rel="stylesheet">
+    <title>Émile Fréchette | Accueil</title>
+    {% include header.html %}
 </head>
 <body>
 <div class="site-container">
-    <img src="media/antenna.png"
-         class="antenna-offset" alt="Antenna">
-
-    <header class="page-header">
-        <img src="media/signature.png" class="signature-offset"
-             alt="Left Logo">
-        <img src="media/LTMF.png" class="ltmf-offset"
-             alt="Right Logo">
-    </header>
+    {% include fr/site-container-head.html %}
 
     <nav class="main-nav">
-        <img src="media/pixelguy.png" class="offset-nav-image"
-             alt="Nav Image">
-        <div class="welcome-text">
-            Welcome to<br>my site!
-        </div>
+        {% include fr/site-container-pixelguy.html %}
         <ul class="primary-menu">
+            <li><a href="#" class="current_page">⌂</a></li>
+            <li><a href="pages/bio.html" class="active">Bio</a></li>
+            <li><a href="pages/cv.html" class="active">CV</a></li>
+            <li><a href="pages/projects.html" class="active">Projects</a></li>
+            <li><a href="#" class="active">Blog</a></li>
+            <li><a href="pages/contact.html" class="active">Contact</a></li>
         </ul>
-
         <ul class="secondary-menu">
         </ul>
     </nav>
 
     <main class="content-wrapper">
+        <p class="lang_switch"><a href="/english_site/wip_page.html">EN</a> | FR</p>
+        <br>
         <div class="scroll-area">
             <div class="main-content">
-                <br>
-                <p class="en_construction">
-                   Site en
-                        construction<br>
+                <h1 class="graffiti-title" data-text="Content Title">Accueil</h1>
                 <hr>
-                </p>
                 <br>
-                <center><img src="media/painting.jpg"
-                             height="650"></center>
+                <p>Je m'appelle Émile, je suis développeur de jeux vidéo indépendant,
+                    artiste multi-disciplinaire et enseignant en informatique.
+                    Ceci est ma page personelle sur laquelle je partage mes idées
+                    et mes projets passés et futurs.</p>
             </div>
         </div>
+        <nav aria-label="Breadcrumb" class="breadcrumb-container">
+            <ol class="breadcrumb-list">
+                <li aria-current="page">⌂</li>
+            </ol>
+        </nav>
     </main>
 
-    <footer class="page-footer">
-        <p>< you've reached the end. ></p>
-        <p class="red-footer-text">let the mice free © émile fréchette </p>
-    </footer>
+    {% include fr/footer.html %}
 
 </div>
 </body>
