@@ -432,6 +432,86 @@ using a designated webkit scrollbar. */
     margin-bottom: 0;
 }
 
+/* Fishbowl  test */
+
+/* assets/css/fish-background.css
+   Floating "swimming fish" background layer.
+   Pair with _includes/fish-background.html
+   ------------------------------------------------------------------ */
+
+/* --- the fixed, full-viewport layer ---------------------------------- */
+.ocean {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Anything that should sit above the fish needs a stacking context */
+.ocean-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- one fish --------------------------------------------------------- */
+.fish {
+    position: absolute;
+    top: var(--y, 50%);
+    left: 0;
+    width: var(--size, 90px);
+    animation: swim var(--dur, 34s) linear var(--delay, 0s) infinite alternate;
+    will-change: transform;
+}
+
+/* Horizontal mirroring, so the fish "turn around" off-screen */
+.fish__flip {
+    animation: turn calc(var(--dur, 34s) * 2) linear var(--delay, 0s) infinite;
+    will-change: transform;
+}
+
+.fish svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation: bob var(--bob, 6s) ease-in-out infinite alternate;
+}
+
+.fish path {
+    fill: none;
+    stroke: var(--color, #04384f);
+    stroke-width: 2.4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+/* --- motion ----------------------------------------------------------- */
+@keyframes swim {
+    from { transform: translateX(-25vw); }
+    to   { transform: translateX(125vw); }
+}
+
+@keyframes turn {
+    0%, 49.9% { transform: scaleX(1);  }
+    50%, 100% { transform: scaleX(-1); }
+}
+
+@keyframes bob {
+    from { transform: translateY(-7px) rotate(-2.5deg); }
+    to   { transform: translateY( 7px) rotate( 2.5deg); }
+}
+
+/* --- accessibility ---------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .fish,
+    .fish__flip,
+    .fish svg {
+        animation: none;
+    }
+}
+
+/****/
+
 @media (max-width: 768px) {
     /* 1. Container - Allow it to shrink but keep padding */
     .site-container {

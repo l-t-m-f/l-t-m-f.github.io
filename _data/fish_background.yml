@@ -1,0 +1,23 @@
+  {% assign my_fish = site.data.my_fish %}
+    {% include fish-background.html fish=my_fish class="ocean--subtle" %}
+  {%- endcomment -%}
+
+  {%- assign fish_list = include.fish | default: site.data.fish_background -%}
+
+  <div class="ocean {{ include.class }}" aria-hidden="true">
+  {%- for f in fish_list %}
+  <div class="fish"
+style="--y: {{ f.y | default: '50%' }};
+              --size: {{ f.size | default: '90px' }};
+              --dur: {{ f.dur | default: '34s' }};
+              --delay: {{ f.delay | default: '0s' }};
+              --color: {{ f.color | default: '#04384f' }};
+              --bob: {{ f.bob | default: '6s' }};">
+  <div class="fish__flip">
+  <svg viewBox="0 0 100 60" focusable="false">
+  <path d="M94 30C84 4 68 3 50 26L8 4C21 15 21 45 8 56L50 34C68 57 84 56 94 30Z"/>
+  </svg>
+  </div>
+  </div>
+  {%- endfor %}
+  </div>
