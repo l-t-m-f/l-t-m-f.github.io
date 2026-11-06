@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     gap: 10px; /* Optional: Adds a small gap between the header, nav, and content */
     position: relative; /* REQUIRED so the antenna can pin to it */
-    margin: 50px auto 0;
+    margin: 74px auto 0;
     min-height: 80vh;
     min-width: 540px;
     max-width: 960px;
@@ -61,7 +61,7 @@ body {
 
 .ltmf-offset {
     position: absolute;
-    top: -65px;
+    top: -75px;
     right: 7px;
 }
 
@@ -262,12 +262,21 @@ h1, h2, h3 {
     padding: 0.2rem 3rem 0.75rem 0.5rem;
 }
 
+/* Scroll area: Usually the main part of the content-wrapper div, it
+contains content which is height-capped and can be scrolled through
+using a designated webkit scrollbar. */
+
 .scroll-area {
+    /* The maximum height of the content before the scroll bar appears. */
     max-height: 52vh;
     overflow-y: auto;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 1.5rem 0.7rem 0.7rem 2rem;
+    /** The padding of the content within the scroll area. */
+    padding-top: 1.5rem;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+    padding-bottom: 2rem;
 }
 
 .scroll-area::-webkit-scrollbar {
@@ -279,6 +288,7 @@ h1, h2, h3 {
 }
 
 .scroll-area::-webkit-scrollbar-thumb {
+    /* The color of the scroll bar when not hovered. */
     background-color: #333;
     border-radius: 10px;
     border: 2px solid transparent;
@@ -286,6 +296,7 @@ h1, h2, h3 {
 }
 
 .scroll-area::-webkit-scrollbar-thumb:hover {
+    /* The color of the scroll bar when hovered. */
     background-color: #F73B00;
 }
 
@@ -302,7 +313,7 @@ h1, h2, h3 {
 .graffiti-title {
     position: relative;
     display: inline-block; /* Keeps the hit-box tight to the text */
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     transform: rotate(-3deg) scale(1.1);
     color: orangered;
     cursor: default;
