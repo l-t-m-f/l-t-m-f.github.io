@@ -80,7 +80,7 @@ body {
 .ribbon {
     border: 2px solid #333;
     border-radius: 0 7px 0 5px;
-    box-shadow: 4px 4px 0px #333;
+    box-shadow: 4px 4px 0 #333;
     color: yellow;
     display: block;
     padding: 10px 20px;
@@ -199,6 +199,12 @@ h1, h2, h3 {
     text-decoration: none;
     text-transform: none;
     transition: background 0.317s;
+}
+
+.main-nav a .current_page {
+    pointer-events: none;
+    cursor: default;
+    color: #888;
 }
 
 .main-nav a:hover {
