@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     gap: 10px; /* Optional: Adds a small gap between the header, nav, and content */
     position: relative; /* REQUIRED so the antenna can pin to it */
-    margin: 90px auto 0;
+    margin: 30px auto 0;
     min-height: 80vh;
     min-width: 540px;
     max-width: 960px;
@@ -61,7 +61,7 @@ body {
 
 .ltmf-offset {
     position: absolute;
-    top: -105px;
+    top: -65px;
     right: 7px;
 }
 
@@ -259,15 +259,15 @@ h1, h2, h3 {
 /* Content Area */
 .content-wrapper {
     flex: 1;
-    padding: .5rem 1rem .75rem .5rem;
+    padding: 0.2rem 3rem 0.75rem 0.5rem;
 }
 
 .scroll-area {
-    max-height: 60vh;
+    max-height: 45vh;
     overflow-y: auto;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 3rem 6rem;
+    padding: 1.5rem 0.7rem 0.7rem 2rem;
 }
 
 .scroll-area::-webkit-scrollbar {
