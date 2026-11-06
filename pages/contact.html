@@ -1,37 +1,26 @@
+---
+---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="FR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Émile Fréchette | Contact</title>
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Rubik+Wet+Paint&family=Rock+Salt&display=swap" rel="stylesheet">
+    {% include header.html %}
 </head>
 <body>
 <div class="site-container">
-    <img src="../media/antenna.png"
-         class="antenna-offset" alt="Antenna">
-
-    <header class="page-header">
-        <img src="../media/signature.png"  class="signature-offset"
-             alt="Left Logo">
-        <img src="../media/LTMF.png"  class="ltmf-offset"
-             alt="Right Logo">
-    </header>
+    {% include fr/site-container-head.html %}
+    <a href="/english_site/pages/contact.html">EN |</a>FR
 
     <nav class="main-nav">
-        <img src="../media/pixelguy.png" class="offset-nav-image"
-             alt="Nav Image">
-        <div class="welcome-text">
-            Welcome to<br>my site!
-        </div>
+        {% include fr/site-container-pixelguy.html %}
         <ul class="primary-menu">
-            <li><a href="../index.html" class="active">⌂</a></li>
-            <li><a href="bio.html" class="active">Bio</a></li>
-            <li><a href="cv.html" class="active">CV</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="/index2.html" class="active">⌂</a></li>
+            <li><a href="/pages/bio.html" class="active">Bio</a></li>
+            <li><a href="/pages/cv.html" class="active">CV</a></li>
+            <li><a href="/pages/projects.html" class="active">Projects</a></li>
+            <li><a href="#" class="active">Blog</a></li>
+            <li><a href="#" class="current_page">Contact</a></li>
         </ul>
-
         <ul class="secondary-menu">
         </ul>
     </nav>
@@ -45,11 +34,6 @@
         </nav>
         <div class="scroll-area">
             <div class="main-content">
-                <div class="promo-ribbons">
-                    <a href="https://letthemicefree.blogspot.com/" class="ribbon ribbon-1">BLOG</a>
-                    <a href="contact.html" class="ribbon ribbon-3">CONTACT
-                        ME</a>
-                </div>
                 <h1 class="graffiti-title" data-text="Content Title">Contact
                 </h1>
                 <hr>
@@ -78,10 +62,7 @@
         </div>
     </main>
 
-    <footer class="page-footer">
-        <p>< you've reached the end. ></p>
-        <p class="red-footer-text">let the mice free © émile fréchette </p>
-    </footer>
+    {% include fr/footer.html %}
 
 </div>
 </body>
