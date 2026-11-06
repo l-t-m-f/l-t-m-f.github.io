@@ -268,7 +268,7 @@ using a designated webkit scrollbar. */
 
 .scroll-area {
     /* The maximum height of the content before the scroll bar appears. */
-    max-height: 52vh;
+    max-height: 58vh;
     overflow-y: auto;
     margin-left: 5px;
     margin-right: 5px;
