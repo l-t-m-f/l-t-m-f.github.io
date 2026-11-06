@@ -61,7 +61,7 @@ body {
 
 .ltmf-offset {
     position: absolute;
-    top: -75px;
+    top: -83px;
     right: 7px;
 }
 
@@ -275,7 +275,7 @@ using a designated webkit scrollbar. */
     /** The padding of the content within the scroll area. */
     padding-top: 1.5rem;
     padding-right: 0.7rem;
-    padding-left: 0.7rem;
+    padding-left: 3.7rem;
     padding-bottom: 2rem;
 }
 
