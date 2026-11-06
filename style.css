@@ -222,6 +222,11 @@ h1, h2, h3 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
+.lang_switch {
+    padding-top: .5rem;
+    padding-left: .5rem;
+}
+
 /* Navbar - Primary menu */
 .primary-menu {
     align-items: center;
@@ -269,9 +274,10 @@ using a designated webkit scrollbar. */
 .scroll-area {
     /* The maximum height of the content before the scroll bar appears. */
     max-height: 58vh;
+    /* Only shows scroll bar if there is more content than the max-height. */
     overflow-y: auto;
-    margin-left: 5px;
-    margin-right: 5px;
+    /* Creates the space before the breadcrumbs. */
+    margin-bottom: 17px;
     /** The padding of the content within the scroll area. */
     padding-top: 1.5rem;
     padding-right: 0.7rem;
@@ -280,10 +286,12 @@ using a designated webkit scrollbar. */
 }
 
 .scroll-area::-webkit-scrollbar {
+    /* Width of the scroll bar. */
     width: 8px;
 }
 
 .scroll-area::-webkit-scrollbar-track {
+    /* Hides the scroll bar tracks. */
     background: transparent;
 }
 
@@ -292,7 +300,7 @@ using a designated webkit scrollbar. */
     background-color: #333;
     border-radius: 10px;
     border: 2px solid transparent;
-    background-clip: content-box; /* now leaves a 4px visible thumb */
+    background-clip: content-box;
 }
 
 .scroll-area::-webkit-scrollbar-thumb:hover {
@@ -318,7 +326,7 @@ using a designated webkit scrollbar. */
     color: orangered;
     cursor: default;
     font-family: 'Sedgwick Ave Display', cursive;
-    text-shadow: 2px 5px 0px #2bb866;
+    text-shadow: 2px 5px 0 #2bb866;
     outline-color: #11d4ef;
     z-index: 1;
     left: 5px; /* Slight offset */
@@ -326,7 +334,7 @@ using a designated webkit scrollbar. */
 }
 
 .breadcrumb-container {
-    padding: .67rem 5rem 0rem 2rem;
+    padding: .67rem 5rem 0 2rem;
     background: transparent;
     border-radius: 4px;
     display: inline-block;
