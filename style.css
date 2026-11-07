@@ -225,6 +225,7 @@ h1, h2, h3 {
 .content-header {
     padding-top: .5rem;
     padding-left: 2.5rem;
+    margin-bottom: .5rem;
 }
 
 /* Navbar - Primary menu */
@@ -279,8 +280,8 @@ using a designated webkit scrollbar. */
     /* Creates the space before the breadcrumbs. */
     margin-bottom: 17px;
     /** The padding of the content within the scroll area. */
-    padding-top: 1.5rem;
-    padding-right: 0.7rem;
+    padding-top: 1.1rem;
+    padding-right: 0.5rem;
     padding-left: 3.7rem;
     padding-bottom: 2rem;
 }
