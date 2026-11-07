@@ -470,22 +470,21 @@ using a designated webkit scrollbar. */
     will-change: transform;
 }
 
-/* Horizontal mirroring, so the fish "turn around" off-screen */
-.fish__flip {
-    animation: turn calc(var(--dur, 34s) * 2) linear var(--delay, 0s) infinite;
-    will-change: transform;
+/* base fish: flip a half-cycle earlier so the art faces its travel direction */
+.fish .fish__flip {
+    animation: turn calc(var(--dur, 34s) * 2) linear
+    calc(var(--delay, 0s) - var(--dur, 34s)) infinite;
 }
 
+/* reverse fish: travel right → left, and stay exactly 180° opposite the base */
 .fish.fish_reverse {
-    /* same box/size/y as .fish, but run the swim timeline backwards:
-       first lap = "to" → "from" (right ➜ left), next lap mirrored        */
     animation: swim var(--dur, 34s) linear var(--delay, 0s) infinite alternate-reverse;
 }
 
 .fish.fish_reverse .fish__flip {
-    /* time-mirror the turn cycle, so the art is always opposite to the
-       forward fish at the same instant – i.e. it faces where it's going   */
-    animation: turn calc(var(--dur, 34s) * 2) linear var(--delay, 0s) infinite reverse;
+    /* back to NO offset — this is what keeps it 180° out of phase with the
+       now-corrected base fish (`-2 × dur` ≡ `0` mod the 2·dur cycle) */
+    animation: turn calc(var(--dur, 34s) * 2) linear var(--delay, 0s) infinite;
 }
 
 .fish svg {
