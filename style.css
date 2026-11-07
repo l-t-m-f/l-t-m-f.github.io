@@ -273,7 +273,7 @@ using a designated webkit scrollbar. */
 
 .scroll-area {
     /* The maximum height of the content before the scroll bar appears. */
-    max-height: 49vh;
+    max-height: 39vh;
     /* Only shows scroll bar if there is more content than the max-height. */
     overflow-y: auto;
     /* Creates the space before the breadcrumbs. */
