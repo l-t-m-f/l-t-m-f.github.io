@@ -493,8 +493,8 @@ using a designated webkit scrollbar. */
 
 /* --- motion ----------------------------------------------------------- */
 @keyframes swim {
-    from { transform: translateX(-25vw); }
-    to   { transform: translateX(125vw); }
+    from { transform: translateY(-50%) translateX(calc(100vw + var(--size))); }
+    to   { transform: translateY(-50%) translateX(calc(-1 * var(--size))); }
 }
 
 @keyframes turn {
