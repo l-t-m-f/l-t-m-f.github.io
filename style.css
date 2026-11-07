@@ -446,6 +446,12 @@ using a designated webkit scrollbar. */
     overflow: hidden;
     pointer-events: none;
     z-index: 0;
+    --c-sea-glass: #2ec4b6;
+    --c-mint:      #06d6a0;
+    --c-teal:      #0a9396;
+    --c-lagoon:    #1b9aaa;
+    --c-ocean:     #0077b6;
+    --c-abyss:     #023e8a;
 }
 
 /* Anything that should sit above the fish needs a stacking context */
@@ -478,7 +484,7 @@ using a designated webkit scrollbar. */
 }
 
 .fish path {
-    fill: none;
+    fill: var(--color, #04384f);
     stroke: var(--color, #04384f);
     stroke-width: 2.4;
     stroke-linejoin: round;
