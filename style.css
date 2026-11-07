@@ -629,10 +629,4 @@ using a designated webkit scrollbar. */
         padding: .23rem 1.2rem .23rem .23rem;
     }
 
-    .graffiti-title {
-        margin-top: 0 !important;
-        display: inline; /* This is the secret to wrapping text around a float */
-    }
-
-
 }
