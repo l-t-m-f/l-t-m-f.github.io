@@ -476,6 +476,18 @@ using a designated webkit scrollbar. */
     will-change: transform;
 }
 
+.fish.fish_reverse {
+    /* same box/size/y as .fish, but run the swim timeline backwards:
+       first lap = "to" → "from" (right ➜ left), next lap mirrored        */
+    animation: swim var(--dur, 34s) linear var(--delay, 0s) infinite alternate-reverse;
+}
+
+.fish.fish_reverse .fish__flip {
+    /* time-mirror the turn cycle, so the art is always opposite to the
+       forward fish at the same instant – i.e. it faces where it's going   */
+    animation: turn calc(var(--dur, 34s) * 2) linear var(--delay, 0s) infinite reverse;
+}
+
 .fish svg {
     display: block;
     width: 100%;
