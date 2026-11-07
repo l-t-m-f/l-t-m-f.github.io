@@ -464,7 +464,6 @@ using a designated webkit scrollbar. */
 .fish {
     position: absolute;
     top: var(--y, 50%);
-    left: -10%;
     width: var(--size, 90px);
     animation: swim var(--dur, 34s) linear var(--delay, 0s) infinite alternate;
     will-change: transform;
@@ -504,8 +503,8 @@ using a designated webkit scrollbar. */
 
 /* --- motion ----------------------------------------------------------- */
 @keyframes swim {
-    from { transform: translateY(-50%) translateX(calc(100vw + var(--size))); }
-    to   { transform: translateY(-50%) translateX(calc(-1 * var(--size))); }
+    0%, 15%   { transform: translateY(-50%) translateX(calc(100vw + var(--size))); }
+    85%, 100% { transform: translateY(-50%) translateX(calc(-1 * var(--size))); }
 }
 
 @keyframes turn {
