@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     gap: 10px; /* Optional: Adds a small gap between the header, nav, and content */
     position: relative; /* REQUIRED so the antenna can pin to it */
-    margin: 74px auto 0;
+    margin: 68px auto 0;
     min-height: 80vh;
     min-width: 540px;
     max-width: 960px;
