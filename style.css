@@ -319,6 +319,8 @@ using a designated webkit scrollbar. */
 }
 
 .graffiti-title {
+    padding-top: .5rem;
+    padding-left: .5rem;
     position: relative;
     display: inline-block; /* Keeps the hit-box tight to the text */
     font-size: 3.8rem;
