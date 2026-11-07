@@ -289,6 +289,8 @@ using a designated webkit scrollbar. */
 .scroll-area::-webkit-scrollbar {
     /* Width of the scroll bar. */
     width: 8px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .scroll-area::-webkit-scrollbar-track {
