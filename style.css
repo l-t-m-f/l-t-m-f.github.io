@@ -464,7 +464,7 @@ using a designated webkit scrollbar. */
 .fish {
     position: absolute;
     top: var(--y, 50%);
-    left: 0;
+    left: -10%;
     width: var(--size, 90px);
     animation: swim var(--dur, 34s) linear var(--delay, 0s) infinite alternate;
     will-change: transform;
