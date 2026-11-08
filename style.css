@@ -455,7 +455,11 @@ using a designated webkit scrollbar. */
 }
 
 .centered {
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;          /* otherwise everything crams onto one line */
+    justify-content: center;  /* centers along the main axis */
+    align-items: center;      /* centers each item vertically in its row */
+    gap: 8px;                 /* optional: spacing between icons */
 }
 
 .image-placeholder:last-child {
