@@ -123,16 +123,31 @@ body {
     border-top-right-radius: 9px;
 }
 
-h1, h2, h3 {
-    font-size: 2rem;
+h1, h2, h3, h4, h5 {
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
-h4, h5 {
+h1 {
+    font-size: 2.1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+h5 {
+    font-size: 1.0rem;
+    font-style: italic;
 }
 
 /* Navbar - Main Container */
