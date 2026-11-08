@@ -3,84 +3,72 @@
 <!DOCTYPE html>
 <html lang="EN">
 <head>
-    <title>Émile Fréchette | CV</title>
+    <title>Émile Fréchette | Professional CV</title>
     {% include header.html %}
 </head>
 <body>
+{% include fish-background.html %}
 <div class="site-container">
     {% include en/site-container-head.html %}
 
     <nav class="main-nav">
         {% include en/site-container-pixelguy.html %}
         <ul class="primary-menu">
-            <li><a href="/english_site/index.html" class="active">⌂</a></li>
-            <li><a href="/english_site/pages/bio.html" class="active">Bio</a></li>
+            <li><a href="/index.html" class="active">⌂</a></li>
+            <li><a href="/pages/bio.html" class="active">Bio</a></li>
             <li><a href="#" class="current_page">CV</a></li>
-            <li><a href="/english_site/pages/projects.html" class="active">Projects</a></li>
+            <li><a href="/pages/projects.html" class="active">Projets</a></li>
             <li><a href="#" class="active">Blog</a></li>
-            <li><a href="/english_site/pages/contact.html" class="active">Contact</a></li>
+            <li><a href="/pages/contact.html" class="active">Contact</a></li>
         </ul>
         <ul class="secondary-menu">
+            <li><a href="#" class="current_page">Professional CV</a></li>
+            <li><a href="/pages/cv/art.html" class="active">Artist CV</a></li>
         </ul>
     </nav>
 
     <main class="content-wrapper">
-        <p class="lang_switch">EN | <a href="/pages/cv.html">FR</a></p>
-        <br>
+        <div class="content-header">
+            <p>EN| <a href="/pages/cv/pro.html">FR</a> </p>
+            <br>
+            <h1 class="graffiti-title" data-text="Content Title">CV Professionnel</h1>
+            <hr>
+        </div>
         <div class="scroll-area">
             <div class="main-content">
-                <div class="promo-ribbons">
-                    <a href="https://letthemicefree.blogspot.com/"
-                       class="ribbon ribbon-1">BLOG</a>
-                    <a href="contact.html" class="ribbon ribbon-3">CONTACT
-                        ME</a>
-                </div>
-                <h1 class="graffiti-title" data-text="Content Title">CV</h1>
-                <hr>
-                <br>
-
-                <h3>EDUCATION</h3>
+                <h3>Éducation</h3>
                 <p><b>Microprogramme en jeu vidéo indépendant</b></p>
                 <p><i>Université du Québec en Abitibi-Témiscamingue</i>
-                    2023</p>
-                <br/>
+                    2023-2024</p><br/>
+
                 <p><b>Batchelor of Fine Arts (BFA) – Film Production</b></p>
+                <p><b>James Shavick Award in Film Programs</b></p>
                 <p><i>Mel Hoppenheim School of Cinema – Concordia
-                    University</i> 2019</p>
-                <br/>
-                <p><b>Diplôme d'études collégiales (DEC) - Journalisme</b>
-                </p>
-                <p><i>CÉGEP régional de Lanaudière à Terrebonne</i> 2016</p>
-                <br/>
-                <p><b>Université d’été en lettres et création littéraire</b>
-                </p>
-                <p><i>Université du Québec à Rimouski</i> 2015</p>
-                <br/>
+                    University</i> 2016-2019</p><br/>
+
+                <p><b>Diplôme d'études collégiales (DEC)e</b></p>
+                <p>Arts et letters - Profil Journalisme</p>
+                <p><i>CÉGEP régional de Lanaudière à Terrebonne</i> 2014-2016</p><br/>
+
+                <p><b>Université d’été en lettres et création littéraire</b></p>
+                <p><i>Université du Québec à Rimouski</i> 2015</p><br/>
+
                 <p><b>Diplôme d’études secondaires</b></p>
                 <p><b>DÉSI de la SÉBIQ</b></p>
                 <p><b>Certificat du PEI du baccalauréat international (IB)
                 </b></p>
                 <p><i>École secondaire Armand-Corbeil</i> 2009</p>
                 <br/>
-                <h3>DISTINCTIONS</h3>
-                <p><b>James Shavick Award in Film Programs</b></p>
-                <p><i>Mel Hoppenheim School of Cinema – Concordia
-                    University</i> 2019</p>
-                <br/>
-                <h3>EMPLOIS</h3>
+                <h3>Emplois</h3>
                 <p><b>Enseignant (temps plein) – Informatique et jeux
                     vidéo</b></p>
                 <p><i>Collège Lasalle</i> 2024-aujourd'hui</p>
-                <br/>
-                <p><b>Video Technician (freelance)</b></p>
-                <p><i>Concordia Laptop Orchestra (CLOrk), and the RISE
-                    project</i> 2023</p>
                 <br/>
                 <p><b>Chargé de cours – Informatique et jeux vidéo</b></p>
                 <p><i>Collège Lasalle</i> 2022-2024</p>
                 <br/>
                 <p><b>Fondateur</b></p>
-                <p><i>Let the Mice Free</i> 2022-aujourd'hui</p>
+                <p><i>Jeux Ermite / Hermit Games</i> 2024-aujourd'hui</p>
                 <br/>
                 <p><b>Gestionnaire de programme – Création de jeux
                     vidéo et intelligence artificielle</b></p>
@@ -118,13 +106,14 @@
         </div>
         <nav aria-label="Breadcrumb" class="breadcrumb-container">
             <ol class="breadcrumb-list">
-                <li><a href="../wip_page.html">⌂</a></li>
+                <li><a href="/english_site/index.html">⌂</a></li>
                 <li aria-current="page">CV</li>
+                <li aria-current="page">Professional CV</li>
             </ol>
         </nav>
     </main>
 
-    {% include en/footer.html %}
+    {% include fr/footer.html %}
 
 </div>
 </body>
