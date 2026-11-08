@@ -454,6 +454,10 @@ using a designated webkit scrollbar. */
     /* Keeping the monospace feel */
 }
 
+.centered {
+    align-items: center;
+}
+
 .image-placeholder:last-child {
     margin-bottom: 0;
 }
