@@ -462,6 +462,11 @@ using a designated webkit scrollbar. */
     gap: 8px;                 /* optional: spacing between icons */
 }
 
+.centered img {
+    width:75%;        /* half the container's width */
+    height: auto;      /* keep aspect ratio */
+}
+
 .image-placeholder:last-child {
     margin-bottom: 0;
 }
